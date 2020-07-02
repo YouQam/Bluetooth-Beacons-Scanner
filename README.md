@@ -10,7 +10,7 @@ Android            |  iOS
 ## Installation
 - Clone the repo
 - Run `npm install`
-- Build & deploy to `Android`
+- Build & deploy to <b>Android</b>
   - Prerequisites
       - Java JDK 8
       - Android Studio
@@ -20,7 +20,7 @@ Android            |  iOS
     - `ionic cordova run android` #To run on an android studio emulator
     - `ionic cordova run android  --device` #To run on a device
 
-- Build & deploy to `iOS`:
+- Build & deploy to <b>iOS</b>:
   - Prerequisites
     - macOS
     - Xcode, install it from the App Store
