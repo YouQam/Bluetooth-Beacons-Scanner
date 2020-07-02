@@ -1,0 +1,8 @@
+{
+  "name": "mt_beacon_cordova_1",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

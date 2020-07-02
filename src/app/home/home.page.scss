@@ -1,0 +1,21 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+ion-item {
+  --border-style: none;
+  width: 100%;
+  /* border: 1px solid black; */
+  margin: 5px;
+  padding: 0px;
+}
+
+ion-input {
+  border: 1px solid black;
+  margin: 0px;
+}
+
+ion-label {
+  padding: 0px;
+  margin: 0px;
+}

@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title size="large" class="ion-text-center">Beacon Scanner</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- progressbar -->
+  <ion-progress-bar type="indeterminate" [style.display]="scanStatus ? 'block' : 'none'"></ion-progress-bar>
+
+  <ion-item-divider color="primary">
+    <ion-label style="max-width: 290px;">
+      <b>{{scanStatus?"Scanning for nearby beacons":"Press play to start scanning."}} </b>
+    </ion-label>
+    <ion-spinner name="lines-small" color="light" [style.display]="scanStatus ? 'block' : 'none'"></ion-spinner>
+  </ion-item-divider>
+
+  <!--   <ion-item>
+    <ion-label>UUID: </ion-label>
+    <ion-input value={{uuid}}></ion-input>
+    <ion-button style="width: 20%;" (click)="onStartClicked()">Scan</ion-button>
+  </ion-item> -->
+
+  <ion-card *ngFor="let beacon of beaconData; let i = index ">
+    <ion-card-content style="padding: 2px;">
+      <ion-item>
+        <ion-label>
+          <h1>iBeacon</h1>
+        </ion-label>
+        <ion-label style="text-align: right;">
+          <h1>No. {{i+1}}</h1>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-divider style="min-height: 1px; "> </ion-item-divider>
+
+      <ion-item>
+        <ion-label><b>UUID</b> <br> {{beacon.uuid}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Major</b> <br> {{beacon.major}}</ion-label>
+        <ion-label><b>Minor</b> <br> {{beacon.minor}}</ion-label>
+        <ion-label><b>RSSI</b> <br> {{beacon.rssi}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label><b>Distance</b> <br> {{beacon.accuracy}} m</ion-label>
+        <ion-label><b>TX</b> <br> {{beacon.tx}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button [color]='scanStatus ? "danger" : "primary"' (click)="onScanClicked()">
+        <ion-icon [name]='scanStatus ? "pause-sharp" : "play-sharp"' style="font-size: 25px;"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+  </ion-content>
