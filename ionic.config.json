@@ -1,5 +1,5 @@
 {
-  "name": "mt_beacon_cordova_1",
+  "name": "bluetooth_beacons_scanner",
   "integrations": {
     "cordova": {},
     "capacitor": {}
