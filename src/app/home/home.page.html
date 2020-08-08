@@ -15,12 +15,6 @@
     <ion-spinner name="lines-small" color="light" [style.display]="scanStatus ? 'block' : 'none'"></ion-spinner>
   </ion-item-divider>
 
-  <!--   <ion-item>
-    <ion-label>UUID: </ion-label>
-    <ion-input value={{uuid}}></ion-input>
-    <ion-button style="width: 20%;" (click)="onStartClicked()">Scan</ion-button>
-  </ion-item> -->
-
   <ion-card *ngFor="let beacon of beaconData; let i = index ">
     <ion-card-content style="padding: 2px;">
       <ion-item>
@@ -44,7 +38,7 @@
       </ion-item>
       <ion-item>
         <ion-label><b>Distance</b> <br> {{beacon.accuracy}} m</ion-label>
-        <ion-label><b>TX</b> <br> {{beacon.tx}}</ion-label>
+        <ion-label *ngIf="iosDevice"><b>TX</b> <br> {{beacon.tx}}</ion-label>
       </ion-item>
     </ion-card-content>
   </ion-card>

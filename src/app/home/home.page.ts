@@ -15,6 +15,7 @@ export class HomePage {
   scanStatus: boolean = false;
   private delegate: any = null;
   public beaconRegion: any = null;
+  public iosDevice: boolean = false;
 
 
   constructor(private readonly ibeacon: IBeacon, private readonly platform: Platform, private changeRef: ChangeDetectorRef) {
@@ -22,6 +23,12 @@ export class HomePage {
       this.requestLocPermissoin();
       this.enableDebugLogs();
     });
+  }
+
+  ngOnInit() {
+    if (! this.platform.is('ios')) {
+      this.iosDevice = true;
+    }
   }
 
   requestLocPermissoin(): void {
