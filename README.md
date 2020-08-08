@@ -25,12 +25,8 @@ Android            |  iOS
     - macOS
     - Xcode, install it from the App Store
     - iOS Developer account, sign up on [developer.apple.com](https://developer.apple.com/), it's free
-  - run the following CLI commands
-    - `ionic build`
-    - `npx cap copy`
-    - `npx cap sync`
-    - In ios/App dir `pod install`
-    - In project dir `npx cap open ios`
+  - Run the following CLI command
+    - `ionic cordova build ios --prod`
 
 ## Troubleshooting
 If all goes well it will start scanning after pressing play button, but it may raise an error due to instability of the iBeacon plugin. To overcome the issue, replace some files with the ones you have in the project, see [here](https://github.com/IT-Dan/Ionic4ibeacon/).
