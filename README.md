@@ -33,7 +33,7 @@ If all goes well it will start scanning for nearby beacons after pressing play b
 ```
 Cannot read property 'locationManager' of undefined
 ```
-This is due to instability of the iBeacon plugin. To overcome the issue, replace some files with the ones you have in the project, see [here](https://github.com/YouQam/ionic5ibeacon).
+This is due to instability of the iBeacon plugin. To overcome the issue, replace some files with the ones you have in the project, [see here](https://github.com/YouQam/ionic5ibeacon).
 
 ## Licence
 MIT
