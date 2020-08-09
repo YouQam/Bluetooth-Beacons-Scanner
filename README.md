@@ -7,8 +7,8 @@ Android            |  iOS
 :-------------------------:|:-------------------------:
 |<p align="center"><img src="https://i.imgur.com/nBDRyxf.gif" height="500" alt="alt text" title="demo"></p> |  <p align="center"><img src="https://i.imgur.com/VJXU0xD.gif" height="500" alt="alt text" title="demo"></p>
 
-## Installation
-- Clone the repo
+## Installation and Usage
+- Clone / download the repo
 - Run `npm install`
 - Build & deploy to <b>Android</b>
   - Prerequisites
@@ -29,7 +29,11 @@ Android            |  iOS
     - `ionic cordova build ios --prod`
 
 ## Troubleshooting
-If all goes well it will start scanning after pressing play button, but it may raise an error due to instability of the iBeacon plugin. To overcome the issue, replace some files with the ones you have in the project, see [here](https://github.com/IT-Dan/Ionic4ibeacon/).
+If all goes well it will start scanning for nearby beacons after pressing play button, but if you run into:
+```
+Cannot read property 'locationManager' of undefined
+```
+This is due to instability of the iBeacon plugin. To overcome the issue, replace some files with the ones you have in the project, see [here](https://github.com/YouQam/ionic5ibeacon).
 
 ## Licence
 MIT
