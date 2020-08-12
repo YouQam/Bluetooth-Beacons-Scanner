@@ -28,6 +28,14 @@ Android            |  iOS
   - Run the following CLI command
     - `ionic cordova build ios --prod`
 
+## Note
+In the project, I'm using estimote beacon with `UUID` = `b9407f30-f5f8-466e-aff9-25556b57fe6d`. In case you are using another company's product, just modify the UUID in path `src/app/home/home.page.ts`
+
+```
+ uuid = <Beacon UUID>;
+```
+
+
 ## Troubleshooting
 If all goes well it will start scanning for nearby beacons after pressing play button, but if you run into:
 ```
